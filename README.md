@@ -7,35 +7,23 @@ To have a local blockchain in your development environment, install testrpc (htt
 
 `npm install -g ethereumjs-testrpc`
 
-### Truffle
-Development tools for compiling, testing and deploying (http://truffleframework.com/):
+### Embark
+Development tools for compiling, testing and deploying (https://embark.readthedocs.io):
 
-`npm install -g truffle`
+`npm -g install embark`
+`npm -g install mocha` (for unit testing)
 
 ## 2. Create your project
 1. Create a directory:
 
-`mkdir <project-name>`
+`embark new <project-name>`
 
-`cd <project-name>`
+`cd <project-name>` (or use the example Tickeths app)
 
-2. Create the project with truffle
+`npm install`
 
-`truffle init`
+Start a local blockchain: `embark simulator`
 
-3. Write your contract under /contract
+Start the embark console: `embark run`
 
-see Tickeths.sol in the examples
-
-4. Write a test under /test
-
-see TestTickeths.sol in examples
-
-5. Compile and test
-
-`truffle compile`
-
-`truffle test`
-
-
-
+Open browser: http://localhost:8000/

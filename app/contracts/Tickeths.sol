@@ -1,4 +1,4 @@
-pragma solidity ^0.4.4;
+pragma solidity ^0.4.7;
 
 contract Tickeths {
 
@@ -23,14 +23,15 @@ contract Tickeths {
   /**
    * Buy ticket for account using the contract
    */
-  function buyTicket() external {
+  function buyTicket() returns (uint retVal) {
     tickets[msg.sender] = block.timestamp;
+    return block.timestamp;
   }
 
   /**
    * Returns the ticket timestamp for the account that is using the contract
    */
-  function getTicketTimestamp() external returns (uint) {
+  function getTicketTimestamp() constant returns (uint retVal) {
     return tickets[msg.sender];
   }
 }

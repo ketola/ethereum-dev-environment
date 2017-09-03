@@ -1,0 +1,15 @@
+{
+  "default": {
+    "gas": "auto",
+    "contracts": {
+      "Tickeths": {
+        "args": [],
+      "SimpleStorage": {
+        "args": [
+          100
+        ]
+      }
+      }
+    }
+  }
+}
